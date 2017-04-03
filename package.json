@@ -4,11 +4,13 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "json": "json-server mocks/fakedata.json --watch",
+    "all": "concurrently \"npm start\" \"npm run json\""
   },
   "private": true,
   "dependencies": {
@@ -20,8 +22,13 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "concurrently": "^3.4.0",
     "core-js": "^2.4.1",
+    "json-server": "^0.9.6",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
     "rxjs": "^5.1.0",
+    "ui-router-ng2": "github:ui-router/ng2#angular4-artifacts",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
