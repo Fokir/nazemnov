@@ -1,0 +1,5 @@
+<div class="container" *ngIf="title && text">
+    <h1>{{title}}</h1>
+    <div [innerHTML]="text"></div>
+    <a uiSref="about">Подробнее</a>
+</div>

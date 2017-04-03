@@ -7,14 +7,24 @@ export class ConfigService {
     private result: Observable<ConfigInterface>;
 
     constructor(private http: Http) {
-        this.result = http.get('/api/config').map(res=>res.json());
+        this.result = http.get('/api/config').map(res => res.json()).publishLast().refCount();
     }
 
     get name() {
-        return this.result.map((config: ConfigInterface)=>config.name);
+        return this.result.map((config: ConfigInterface) => config.name);
+    }
+
+    get desc() {
+        return this.result.map((config: ConfigInterface) => config.home_desc);
+    }
+
+    get address() {
+        return this.result.map((config: ConfigInterface) => config.address);
     }
 }
 
 export interface ConfigInterface {
-    name: string, home_desc: { title: string, text: string }
+    name: string,
+    home_desc: { title: string, text: string },
+    address: { [key: string]: string }
 }

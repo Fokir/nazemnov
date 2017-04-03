@@ -1,0 +1,9 @@
+<div class="container" *ngIf="info">
+    <h1>Центральный офис ООО «Наземнов»</h1>
+    <div class="list">
+        <div class="item" *ngFor="let key of keys">
+            <div class="title">{{key}}</div>
+            <div class="text">{{info[key]}}</div>
+        </div>
+    </div>
+</div>

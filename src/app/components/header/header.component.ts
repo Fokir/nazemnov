@@ -5,19 +5,21 @@ import {Subscription} from "rxjs";
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
-    styleUrls: ['./header.component.less']
+    styleUrls: ['./header.component.less'],
+    animations: [
+    ]
 })
-export class HeaderComponent implements OnDestroy{
+export class HeaderComponent implements OnDestroy {
     name: string = null;
     private _subscriber: Subscription;
 
-    constructor(public config: ConfigService){
-        this._subscriber = config.name.subscribe((res)=>{
+    constructor(public config: ConfigService) {
+        this._subscriber = config.name.subscribe((res) => {
             this.name = res;
         });
     }
 
-    ngOnDestroy(){
+    ngOnDestroy() {
         this._subscriber.unsubscribe();
     }
 }
