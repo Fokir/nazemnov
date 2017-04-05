@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "@types/underscore": "^1.8.0",
     "concurrently": "^3.4.0",
     "core-js": "^2.4.1",
     "json-server": "^0.9.6",
@@ -30,6 +31,7 @@
     "less-loader": "^4.0.3",
     "rxjs": "^5.1.0",
     "ui-router-ng2": "github:ui-router/ng2#angular4-artifacts",
+    "underscore": "^1.8.3",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

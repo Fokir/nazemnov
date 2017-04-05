@@ -1,0 +1,22 @@
+<h1>{{product?.name}}</h1>
+<div class="product" *ngIf="product">
+    <div class="product">
+        <div class="img">
+            <img [src]="product.img" [alt]="product.name">
+        </div>
+        <div class="product__inner">
+            <div [innerHTML]="product.description"></div>
+
+            <table>
+                <tr>
+                    <th>Модель</th>
+                    <th *ngFor="let model of product.models">{{model}}</th>
+                </tr>
+                <tr *ngFor="let key of getKeys(product.params)">
+                    <td>{{key}}</td>
+                    <td *ngFor="let param of product.params[key]">{{param}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

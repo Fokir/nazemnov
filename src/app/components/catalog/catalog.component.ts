@@ -10,7 +10,11 @@ export class CatalogComponent {
     private items: Array<CatalogInterface> = [];
 
     constructor(private catalog: CatalogService) {
-        catalog.all.subscribe((res: Array<CatalogInterface>) => {
+
+    }
+
+    ngOnInit(){
+        this.catalog.all.subscribe((res: Array<CatalogInterface>) => {
             this.items = res.slice(0, this.count == 0 ? res.length : this.count);
         });
     }

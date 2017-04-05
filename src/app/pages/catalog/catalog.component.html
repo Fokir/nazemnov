@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<ui-view class="container">
+    <h1>Каталог продукции</h1>
+
+    <div class="catalog" *ngFor="let catalog of catalogs">
+        <h2>{{catalog.name}}</h2>
+
+        <div class="product" *ngFor="let product of catalog.products" uiSref="catalog.item" [uiParams]="{id: product.id}">
+            <div class="img">
+                <img [src]="product.img" [alt]="product.name">
+            </div>
+            <div class="product__inner">
+                <h3>{{product.name}}</h3>
+                <div [innerHTML]="product.description"></div>
+            </div>
+        </div>
+
+        <p *ngIf="!catalog.products.length">В данном категории нет продукции</p>
+    </div>
+</ui-view>
+
+<app-info></app-info>
+
+<app-footer></app-footer>

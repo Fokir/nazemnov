@@ -1,0 +1,65 @@
+h1 {
+    margin-top: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+p {
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.product {
+    display: flex;
+
+    .img {
+        width: 100%;
+        margin: 0 10px 0 0;
+    }
+    img {
+        width: 100%;
+    }
+
+    &__inner {
+        h3 {
+            font-size: 14px;
+            margin: 5px 0 15px 0;
+        }
+
+        > div {
+            font-size: 12px;
+        }
+    }
+
+    table {
+        margin: 30px 0 0 0;
+        width: 100%;
+        border: none;
+        border-collapse: inherit;
+        border-spacing: 0;
+        border-color: inherit;
+
+        th {
+            padding: 5px 0;
+            background: #647b85;
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            font-weight: normal;
+            border-left: 1px solid #cccccc;
+            &:first-child{
+                border-left: none;
+            }
+        }
+
+        td{
+            padding: 5px 0;
+            font-size: 12px;
+            font-weight: lighter;
+            text-align: center;
+            border-bottom: 1px solid #cccccc;
+        }
+    }
+}
+
