@@ -2,7 +2,6 @@ import {Component} from "@angular/core";
 import {CatalogInterface, CatalogService} from "../../services/catalog.service";
 
 @Component({
-    selector: 'app-page-catalog',
     templateUrl: './catalog.component.html',
     styleUrls: ['./catalog.component.less']
 })

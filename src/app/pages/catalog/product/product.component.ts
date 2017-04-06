@@ -3,7 +3,6 @@ import {ProductInterface, CatalogService} from "../../../services/catalog.servic
 import {StateService} from "ui-router-ng2";
 
 @Component({
-    selector: 'app-page-catalog',
     templateUrl: './product.component.html',
     styleUrls: ['./product.component.less']
 })
@@ -15,7 +14,6 @@ export class ProductComponent{
     }
 
     ngOnInit(){
-        console.log(this.state);
         this.catalog.product(this.state.params.id).subscribe((res)=>{
             this.product = res;
         });
