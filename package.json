@@ -4,12 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "json": "json-server mocks/fakedata.json --watch",
+    "start": "node ./node_modules/@angular/cli/bin/ng serve --proxy-config proxy.conf.json",
+    "build": "node ./node_modules/@angular/cli/bin/ng build",
+    "json": "node ./node_modules/json-server/bin/index.js mocks/fakedata.json --watch",
     "all": "concurrently \"npm start\" \"npm run json\""
   },
   "private": true,
