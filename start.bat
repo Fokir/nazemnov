@@ -1,3 +1,1 @@
-echo before
-CMD /C npm --version
-echo after
+CMD /C npm run all
