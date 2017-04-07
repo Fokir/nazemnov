@@ -7,7 +7,7 @@
     "start": "node ./node_modules/@angular/cli/bin/ng serve --proxy-config proxy.conf.json",
     "build": "node ./node_modules/@angular/cli/bin/ng build",
     "json": "node ./node_modules/json-server/bin/index.js mocks/fakedata.json --watch",
-    "all": "concurrently \"npm start\" \"npm run json\""
+    "all": "node ./node_modules/concurrently/src/main.js \"npm start\" \"npm run json\""
   },
   "private": true,
   "dependencies": {
