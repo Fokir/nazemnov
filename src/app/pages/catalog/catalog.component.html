@@ -12,7 +12,7 @@
             </div>
             <div class="product__inner">
                 <h3>{{product.name}}</h3>
-                <div [innerHTML]="product.description"></div>
+                <div [innerHTML]="product.description | limitTo: 400"></div>
             </div>
         </div>
 

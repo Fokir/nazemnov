@@ -22,6 +22,7 @@ import {ProductComponent} from "./pages/catalog/product/product.component";
 import {PageComponent} from "./components/page/page.component";
 import {AboutComponent} from "./pages/about/about.component";
 import {ContactsComponent} from "./pages/contacts/contacts.component";
+import {TruncatePipe} from "./pipe/TruncatePipe";
 
 const app_states: Array<Ng2StateDeclaration> = [
     {name: 'home', url: '/', component: HomeComponent, data: {name: 'Главная'}},
@@ -45,7 +46,8 @@ const app_states: Array<Ng2StateDeclaration> = [
         ProductComponent,
         PageComponent,
         AboutComponent,
-        ContactsComponent
+        ContactsComponent,
+        TruncatePipe
     ],
     imports: [
         BrowserModule,

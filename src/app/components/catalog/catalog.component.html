@@ -2,7 +2,7 @@
     <h1>Каталог оборудования</h1>
 
     <div class="list">
-        <section class="item" *ngFor="let catalog of items">
+        <section class="item" *ngFor="let catalog of items" uiSref="catalog">
             <img [src]="catalog.img" [alt]="catalog.name">
             <div>
                 <h2>{{catalog.name}}</h2>
