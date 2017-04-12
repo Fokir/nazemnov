@@ -7,7 +7,7 @@ export class ConfigService {
     private result: Observable<ConfigInterface>;
 
     constructor(private http: Http) {
-        this.result = http.get('/api/config').map(res => res.json()).publishLast().refCount();
+        this.result = http.get('/config').map(res => res.json()).publishLast().refCount();
     }
 
     get name() {

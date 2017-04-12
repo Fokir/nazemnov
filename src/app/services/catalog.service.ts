@@ -9,8 +9,8 @@ export class CatalogService {
     private resultProduct: Observable<Array<ProductInterface>>;
 
     constructor(private http: Http) {
-        this.result = http.get('/api/catalogs').map(res => res.json()).publishLast().refCount();
-        this.resultProduct = http.get('/api/products').map(res => res.json()).publishLast().refCount();
+        this.result = http.get('/catalogs').map(res => res.json()).publishLast().refCount();
+        this.resultProduct = http.get('/products').map(res => res.json()).publishLast().refCount();
     }
 
     get all() {
@@ -30,7 +30,7 @@ export class CatalogService {
     }
 
     product(id: string){
-        return this.http.get(`/api/products/${id}`).map(res=>res.json());
+        return this.http.get(`/products/${id}`).map(res=>res.json());
     }
 }
 
